@@ -16,7 +16,7 @@ node app.js [OPTION]
   -h, --help        display this help and exit
   -v, --version     output version information and exit
 ```
-For effective use create crontab entry (depents on release version):
+For effective use create crontab entry (depends on release version):
 ```
 0 * * * * /usr/local/bin/node /path/to/node-version-check/app.js --stable
 0 * * * * /usr/local/bin/node /path/to/node-version-check/app.js --lts
