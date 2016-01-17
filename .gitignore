@@ -32,3 +32,9 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+
+# IntelliJ IDEA project folder
+.idea
+
+# OS X junk files
+.DS_Store

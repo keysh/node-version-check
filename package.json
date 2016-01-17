@@ -1,0 +1,29 @@
+{
+  "name": "node-version-check",
+  "version": "1.0.0",
+  "description": "check for available node.js updates",
+  "main": "app.js",
+  "scripts": {
+    "stable": "node app.js --stable",
+    "lts": "node app.js --lts",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keysh/node-version-check.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "version"
+  ],
+  "author": "Jakub Leško",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keysh/node-version-check/issues"
+  },
+  "homepage": "https://github.com/keysh/node-version-check#readme",
+  "dependencies": {
+    "node-notifier": "^4.4.0"
+  }
+}
