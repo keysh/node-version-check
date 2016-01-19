@@ -1,6 +1,6 @@
 {
   "name": "node-version-check",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "check for available node.js updates",
   "main": "app.js",
   "scripts": {
