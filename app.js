@@ -30,7 +30,7 @@ const check = (res) => {
     });
 
     res.on('end', () => {
-        const regex = /(v\d+(\.\d)*)/gi;
+        const regex = /v(\d+.\d+.\d+)/gi;
 
         const installed = process.version.replace('v', '');
         const available = content.match(regex)[0].replace('v', '');
