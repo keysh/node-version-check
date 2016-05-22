@@ -3,7 +3,7 @@ const path = require('path');
 const https = require('https');
 const notifier = require('node-notifier');
 
-const VERSION = '1.0.1';
+const VERSION = '1.0.2';
 
 const help = () => {
     console.log('Usage: node ' + path.basename(__filename) + ' [OPTION]\n' +
