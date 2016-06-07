@@ -3,7 +3,7 @@ const path = require('path');
 const https = require('https');
 const notifier = require('node-notifier');
 
-const VERSION = '1.0.2';
+const VERSION = '1.1.0';
 
 const help = () => {
     console.log('Usage: node ' + path.basename(__filename) + ' [OPTION]\n' +
@@ -21,7 +21,16 @@ const version = () => {
                 'License:\tThe MIT License (MIT).\n');
 };
 
-const check = (res) => {
+const check = (options) => {
+    const req = https.request(options, compare);
+
+    req.on('error', (err) => {
+        console.error(`ERROR: ${err}`)
+    });
+    req.end();
+};
+
+const compare = (res) => {
     res.setEncoding('utf8');
 
     let content;
@@ -64,11 +73,11 @@ const source = {
 switch (process.argv[2]) {
     case '-s':
     case '--stable':
-        https.request(source.stable, check).end();
+        check(source.stable);
         break;
     case '-l':
     case '--lts':
-        https.request(source.lts, check).end();
+        check(source.lts);
         break;
     case '-v':
     case '--version':
